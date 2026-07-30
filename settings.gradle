@@ -1,0 +1,4 @@
+rootProject.name = 'java-template'
+include 'dataAccess'
+include 'presentation'
+include 'service'

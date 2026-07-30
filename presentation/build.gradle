@@ -1,0 +1,27 @@
+plugins {
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    implementation(project(':service'))
+    implementation(project(':dataAccess'))
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+}
+
+springBoot {
+    mainClass = 'ru.osaulenko.Application'
+}
+
+bootJar {
+    mainClass = 'ru.osaulenko.Application'
+}
+
+bootRun {
+    mainClass.set('ru.osaulenko.Application')
+}
